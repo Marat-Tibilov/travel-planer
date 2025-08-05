@@ -10,6 +10,7 @@ export const NewTripForm = () => {
 
     const { citiesData, isLoading } = useCitiesData();
     const {city, information, startDate, endDate, saveTrips, setCity, setInformation, setStartDate, setEndDate} = useSaveTrip()
+    const today = new Date().toISOString().split("T")[0];
 
 
     return (
@@ -45,6 +46,7 @@ export const NewTripForm = () => {
                         <label className="block text-sm font-medium mb-2">Начало поездки</label>
                         <input
                             value={startDate}
+                            min={today}
                             type="date"
                             className="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-200 text-lg"
                             required
