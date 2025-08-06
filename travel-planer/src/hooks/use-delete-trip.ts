@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import {ITrip} from "@/shared/types/api.interfaces";
 
 
-export async function useDeleteTrip(id : ITrip['id']) {
+export async function deleteTrip(id : ITrip['id']) {
     try {
         await deleteDoc(doc(db, "trips", id));
         toast.success("Поездка удалена");

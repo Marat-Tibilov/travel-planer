@@ -2,7 +2,7 @@ import {TableTravels} from "@/components/table-travels";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: "Planer",
+    title: "My Trips",
 }
 
 export default function Home() {

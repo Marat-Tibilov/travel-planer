@@ -2,13 +2,13 @@ import {Metadata} from "next";
 
 
 export const metadata: Metadata = {
-    description: 'Favorites',
+    description: 'Map',
 }
 
 export default function () {
     return(
-        <section>
-            <p>  </p>
-        </section>
+        <>
+            <h1> хуй </h1>
+        </>
     )
 }

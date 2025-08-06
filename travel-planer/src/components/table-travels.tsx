@@ -1,7 +1,7 @@
 'use client'
 
 import { useGetTrips } from "@/hooks/use-get-trips";
-import { useDeleteTrip } from "@/hooks/use-delete-trip";
+import { deleteTrip } from "@/hooks/use-delete-trip";
 
 export function TableTravels() {
     const { isLoading, trips } = useGetTrips();
@@ -79,7 +79,7 @@ export function TableTravels() {
                                     </button>
                                     <button
                                         className="cursor-pointer px-3 py-1 text-sm text-white bg-red-500 rounded hover:bg-red-600 transition"
-                                        onClick={() => useDeleteTrip(trip.id)}
+                                        onClick={() => deleteTrip(trip.id)}
                                     >
                                         Удалить
                                     </button>
