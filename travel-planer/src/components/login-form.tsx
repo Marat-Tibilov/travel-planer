@@ -1,6 +1,6 @@
 import {useLogin} from "@/store/use-auth-state";
 import {FormEvent, useState} from "react";
-import {loginUser, registerUser} from "@/services/auth/fierbase.auth";
+import {loginUser} from "@/services/auth/fierbase.auth";
 import toast from "react-hot-toast";
 import {FirebaseError} from "firebase/app";
 
