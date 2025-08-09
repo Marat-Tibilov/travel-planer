@@ -36,19 +36,3 @@
 
 
 ---
-
-
-## ⚙ Установка и запуск локально
-
-```bash
-# 1. Клонируем репозиторий
-git clone https://github.com/Marat-Tibilov/travel-planer
-
-# 2. Переходим в папку проекта
-cd travel-planer
-
-# 3. Устанавливаем зависимости
-npm install
-
-# 4. Запускаем проект
-npm run dev
