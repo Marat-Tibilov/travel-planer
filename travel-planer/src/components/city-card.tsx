@@ -2,6 +2,7 @@ import {PAGES} from "@/config/pages.config";
 import {useRouter} from "next/navigation";
 import {CityCardProps} from "@/shared/types/api.interfaces";
 import { useSetCity} from "@/store/use-city-detail-store";
+import Image from "next/image";
 
 export const CityCard = ({ city, img, description }: CityCardProps) => {
     const router = useRouter();
@@ -18,7 +19,7 @@ export const CityCard = ({ city, img, description }: CityCardProps) => {
             onClick={openDetails}
         >
             {img && (
-                <img
+                <Image
                     src={img}
                     alt={city}
                     className="w-full h-20 md:h-28 object-cover rounded-md mb-1 md:mb-2"
