@@ -22,6 +22,8 @@ export const CityCard = ({ city, img, description }: CityCardProps) => {
                 <Image
                     src={img}
                     alt={city}
+                    width={300}
+                    height={200}
                     className="w-full h-20 md:h-28 object-cover rounded-md mb-1 md:mb-2"
                     loading="lazy"
                 />

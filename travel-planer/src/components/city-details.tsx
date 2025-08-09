@@ -1,6 +1,7 @@
 'use client';
 
 import {useSelectedCity} from "@/store/use-city-detail-store";
+import Image from "next/image";
 
 
 export function CityDetail() {
@@ -19,7 +20,9 @@ export function CityDetail() {
                     </div>
 
                     <div className="flex justify-center">
-                        <img
+                        <Image
+                            width={500}
+                            height={500}
                             src={selectedCity.img}
                             alt={selectedCity.city}
                             className="max-w-full h-auto max-h-96 object-cover rounded-lg shadow-md"
