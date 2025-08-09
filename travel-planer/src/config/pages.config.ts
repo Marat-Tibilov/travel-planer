@@ -3,7 +3,7 @@
 export const NAV_ITEMS_CONFIG = {
     HOME: { href: '/', label: 'Мои планы', icon: './favorite.svg', id: 1 },
     NEW_TRIPS: { href: '/new-trips', label: 'Добавить новое', icon: './plus.svg', id: 2 },
-    FAVORITES: { href: '/map', label: 'Карта', icon: './map.svg', id: 3 },
+    CONVERTOR: { href: '/converter', label: 'Конвертор', icon: './dollar.svg', id: 3 },
 }
 
 export const PAGES = {

@@ -1,14 +1,15 @@
 import {Metadata} from "next";
+import {CurrencyConverter} from "@/components/converter";
 
 
 export const metadata: Metadata = {
-    description: 'Map',
+    description: 'Converter page',
 }
 
 export default function () {
     return(
         <>
-            <h1> хуй </h1>
+            <CurrencyConverter/>
         </>
     )
 }

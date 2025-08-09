@@ -76,7 +76,7 @@ export const NewTripForm = () => {
                 </div>
 
                 <button
-                    className="w-full bg-blue-600 text-white py-3 md:py-4 rounded-lg hover:bg-blue-700 transition text-base md:text-lg"
+                    className="cursor-pointer w-full bg-blue-600 text-white py-3 md:py-4 rounded-lg hover:bg-blue-700 transition text-base md:text-lg"
                     type="submit"
                 >
                     Сохранить

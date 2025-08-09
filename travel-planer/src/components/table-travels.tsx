@@ -2,9 +2,13 @@
 
 import { useGetTrips } from "@/hooks/use-get-trips";
 import { deleteTrip } from "@/hooks/use-delete-trip";
+import {ITrip} from "@/shared/types/api.interfaces";
+import {useState} from "react";
+import {EditTripModal} from "@/components/edit-trip-modal";
 
 export function TableTravels() {
     const { isLoading, trips } = useGetTrips();
+    const [selectedTrip, setSelectedTrip] = useState<ITrip | null>(null);
 
     if (isLoading) {
         return (
@@ -74,6 +78,7 @@ export function TableTravels() {
                                 <div className="flex flex-col sm:flex-row gap-2">
                                     <button
                                         className="cursor-pointer px-3 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600 transition"
+                                        onClick={() => {setSelectedTrip(trip)}}
                                     >
                                         Редактировать
                                     </button>
@@ -89,6 +94,9 @@ export function TableTravels() {
                     ))}
                     </tbody>
                 </table>
+                {selectedTrip && (
+                    <EditTripModal trip={selectedTrip} onClose={() => setSelectedTrip(null)} />
+                )}
             </div>
         </div>
     );

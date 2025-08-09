@@ -1,7 +1,7 @@
 'use client'
 
-
-import {useLogin, useRegister} from "@/store/use-auth-state";
+import { FirebaseError } from "firebase/app";
+import { useRegister} from "@/store/use-auth-state";
 import {FormEvent, useState} from "react";
 import {registerUser} from "@/services/auth/fierbase.auth";
 import toast from "react-hot-toast";
@@ -16,9 +16,11 @@ export default function RegisterForm() {
         try {
             await registerUser(email, password);
             registerStore();
-        } catch (error: any) {
-            toast.error(error.message || "Ошибка при регистрации");
-            console.error("Registration error:", error);
+        } catch (error: unknown) {
+            if (error instanceof FirebaseError) {
+                toast.error("Возникла ошибка при регистарции, попробуйте еще раз")
+                console.error("Ошибка регистрации:", error);
+            }
         }
     };
 

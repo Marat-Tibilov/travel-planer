@@ -2,6 +2,7 @@ import {useLogin} from "@/store/use-auth-state";
 import {FormEvent, useState} from "react";
 import {loginUser, registerUser} from "@/services/auth/fierbase.auth";
 import toast from "react-hot-toast";
+import {FirebaseError} from "firebase/app";
 
 
 export function LoginForm() {
@@ -14,9 +15,11 @@ export function LoginForm() {
         try {
             await loginUser(email, password);
             loginStore();
-        } catch (error: any) {
-            toast.error(error.message || "Ошибка при регистрации");
-            console.error("Registration error:", error);
+        } catch (error: unknown) {
+            if(error instanceof FirebaseError) {
+                toast.error(error.message || "Ошибка входа в аккаунт");
+                console.error("Ошибка входа в аккаунт:", error);
+            }
         }
     };
 
