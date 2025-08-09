@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: 'Converter page',
 }
 
-export default function () {
+export default function ConvertorPage() {
     return(
         <>
             <CurrencyConverter/>
