@@ -5,7 +5,7 @@
 
 ## 🚀 Деплой
 Приложение задеплоено на [Vercel](https://vercel.com/) и доступно онлайн:  
-👉 [Открыть TripPlanner]([https://твой-деплой.vercel.app](https://travel-planer-fsje.vercel.app/))
+👉 Открыть TripPlanner https://travel-planer-fsje.vercel.app/
 
 ---
 
@@ -42,7 +42,7 @@
 
 ```bash
 # 1. Клонируем репозиторий
-git clone [https://github.com/username/tripplanner.git](https://github.com/Marat-Tibilov/travel-planer)
+git clone https://github.com/Marat-Tibilov/travel-planer
 
 # 2. Переходим в папку проекта
 cd travel-planer
