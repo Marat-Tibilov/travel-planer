@@ -42,10 +42,10 @@
 
 ```bash
 # 1. Клонируем репозиторий
-git clone https://github.com/username/tripplanner.git
+git clone [https://github.com/username/tripplanner.git](https://github.com/Marat-Tibilov/travel-planer)
 
 # 2. Переходим в папку проекта
-cd tripplanner
+cd travel-planer
 
 # 3. Устанавливаем зависимости
 npm install
