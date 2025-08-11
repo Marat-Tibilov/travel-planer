@@ -41,7 +41,7 @@ const Header = () => {
 
                     <h5>{title}</h5>
 
-                    <button className="cursor-pointer" onClick={() => router.push('/profile')}>
+                    <button className="cursor-pointer" onClick={() => router.push('/')}>
                         <Image
                             src="/user.svg"
                             alt="Пользователь"

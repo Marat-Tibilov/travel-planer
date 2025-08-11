@@ -17,7 +17,7 @@ export function LoginForm() {
             loginStore();
         } catch (error: unknown) {
             if(error instanceof FirebaseError) {
-                toast.error(error.message || "Ошибка входа в аккаунт");
+                toast.error("Ошибка входа в аккаунт");
                 console.error("Ошибка входа в аккаунт:", error);
             }
         }

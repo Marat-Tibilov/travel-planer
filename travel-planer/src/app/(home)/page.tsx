@@ -1,15 +1,16 @@
-import {TableTravels} from "@/components/table-travels";
 import {Metadata} from "next";
+import {Profile} from "@/components/profile";
+
 
 export const metadata: Metadata = {
-    title: "My Trips",
-}
+    title: 'Profile',
+};
 
-export default function Home() {
+export default function ProfilePage(){
 
-  return (
-      <>
-            <TableTravels/>
-      </>
-  );
-}
+    return (
+        <section>
+            <Profile/>
+        </section>
+    )
+};
