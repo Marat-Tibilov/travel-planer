@@ -28,11 +28,11 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
         <body className="antialiased bg-white text-black">
         <div className="min-h-screen flex flex-col">
+            <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
             <CheckAuth>
                 <Header />
                 <main className="flex-1 p-4">
                     {children}
-                    <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
                 </main>
             </CheckAuth>
         </div>

@@ -2,7 +2,7 @@ import {useLogin} from "@/store/use-auth-state";
 import {FormEvent, useState} from "react";
 import {loginUser} from "@/services/auth/fierbase.auth";
 import toast from "react-hot-toast";
-import {FirebaseError} from "firebase/app";
+
 
 
 export function LoginForm() {
@@ -16,8 +16,8 @@ export function LoginForm() {
             await loginUser(email, password);
             loginStore();
         } catch (error: unknown) {
-            if(error instanceof FirebaseError) {
-                toast.error("Ошибка входа в аккаунт");
+            if(error instanceof Error) {
+                toast.error(error.message);
                 console.error("Ошибка входа в аккаунт:", error);
             }
         }

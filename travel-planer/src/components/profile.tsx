@@ -5,6 +5,7 @@ import {ProfileNavigation} from "@/components/profile-navigation";
 import {useLogout} from "@/store/use-auth-state";
 import toast from "react-hot-toast";
 import {FirebaseError} from "firebase/app";
+import {logoutUser} from "@/services/auth/fierbase.auth";
 
 export function Profile() {
     const [isEditing, setIsEditing] = useState(false);
@@ -16,7 +17,7 @@ export function Profile() {
 
     const logout = async () => {
         try {
-            await logoutStore();
+            await logoutUser();
             logoutStore();
         }catch (e) {
             if (e instanceof FirebaseError) {
