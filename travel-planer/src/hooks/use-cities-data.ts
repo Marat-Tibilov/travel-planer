@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {WikiI} from "@/shared/types/api.interfaces";
-import {popularCities} from "@/constanst/swiper.constants";
+import {popularCities} from "@/constants/swiper.constants";
 import {fetchCitySummary} from "@/services/api/wiki";
 import toast from "react-hot-toast";
 

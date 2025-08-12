@@ -68,7 +68,7 @@ export function TableTravels() {
                             <td className="block md:table-cell px-4 py-3 md:w-[20%]">
                                 <div className="md:hidden font-medium text-gray-500 mb-1">Даты</div>
                                 <div className="whitespace-nowrap">
-                                    с {trip.startDate} до {trip.endDate}
+                                    с {trip.startDate.split('-').reverse().join('-')} до {trip.endDate.split('-').reverse().join('-')}
                                 </div>
                             </td>
 

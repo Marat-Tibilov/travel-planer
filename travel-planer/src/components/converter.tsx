@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { currencies } from "@/constanst/currencies";
+import { currencies } from "@/constants/currencies";
 import {handleConverter} from "@/services/api/exchange";
 
 

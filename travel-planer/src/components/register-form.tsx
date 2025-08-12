@@ -3,7 +3,7 @@
 
 import { useRegister} from "@/store/use-auth-state";
 import {FormEvent, useState} from "react";
-import {registerUser} from "@/services/auth/fierbase.auth";
+import {registerUser} from "@/services/auth/authorization";
 import toast from "react-hot-toast";
 
 export default function RegisterForm() {

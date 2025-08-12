@@ -1,4 +1,4 @@
-import {WIKI_URL} from "@/constanst/api.constants";
+import {WIKI_URL} from "@/constants/api.constants";
 import {WikiI} from "@/shared/types/api.interfaces";
 
 export async function fetchCitySummary(city: string): Promise<WikiI | null> {

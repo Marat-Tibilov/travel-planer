@@ -5,7 +5,7 @@ import {ProfileNavigation} from "@/components/profile-navigation";
 import {useLogout} from "@/store/use-auth-state";
 import toast from "react-hot-toast";
 import {FirebaseError} from "firebase/app";
-import {logoutUser} from "@/services/auth/fierbase.auth";
+import {logoutUser} from "@/services/auth/authorization";
 
 export function Profile() {
     const [isEditing, setIsEditing] = useState(false);

@@ -1,7 +1,7 @@
 // utils/currencyConverterUtils.ts
 
 import toast from "react-hot-toast";
-import {EXCHANGE_URL} from "@/constanst/api.constants";
+import {EXCHANGE_URL} from "@/constants/api.constants";
 
 export const handleConverter = async (
     fromCurrency: string,
