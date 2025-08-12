@@ -1,7 +1,7 @@
 'use client'
 
 import {usePathname, useRouter} from 'next/navigation'
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import HamburgerMenu from '@/components/hamburger-menu'
 import {NAV_ITEMS} from "@/config/pages.config";
@@ -20,6 +20,15 @@ const Header = () => {
     const pathname = usePathname();
     const title = pathToTitle[pathname];
     const router = useRouter();
+
+    const handleEsc = (event: KeyboardEvent) => {
+        if(event.key === 'Escape') setIsMenuOpen(false);
+    }
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleEsc);
+        return () => window.removeEventListener('keydown', handleEsc);
+    },[])
 
 
     return (
